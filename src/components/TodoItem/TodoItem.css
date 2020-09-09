@@ -1,5 +1,4 @@
 .todo-item {
-    font-size: 1.5rem;
     width: 90%;
     margin: 1rem auto;
     padding: 0.5rem;
@@ -9,9 +8,17 @@
 }
 
 .todo-text {
-
+    font-size: 1.5rem;
 }
 
 .todo-delete-button {
-
+    display: block;
+    padding: 0.2rem;
+    min-width: 100px;
+    border-radius: 0.2rem;
+    background: #f32013;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: none;
 }
