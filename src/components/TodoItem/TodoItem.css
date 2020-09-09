@@ -1,0 +1,8 @@
+.todo-item {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 3px 0px hsla(0, 0%, 20%, 0.5);
+    border: 1px solid hsla(0, 0%, 20%, 0.5);
+}

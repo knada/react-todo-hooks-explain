@@ -1,6 +1,7 @@
 .todo-input-container {
     width: 100%;
     margin: auto;
+    padding: 1rem 0;
 }
 
 .todo-input {
@@ -9,5 +10,9 @@
     margin: auto;
     padding: 0.5rem;
     font-size: 1.5rem;
-    border: 2px solid hsl(0, 0%, 50%);
+    border: 1px solid hsla(0, 0%, 20%, 0.5);
+}
+
+.todo-input:focus {
+    border: 1px solid hsl(0, 0%, 80%);
 }
