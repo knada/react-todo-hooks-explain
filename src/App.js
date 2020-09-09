@@ -26,13 +26,30 @@ function App() {
         })
     }
 
+    const deleteTodo = id => {
+        //the filter function returns a new array of elements that meet the conditions passed to it
+        //so we can use it to remove a todo from our state in a functional way.
+        const newTodos = todos.filter(todo => id !== todo.id)
+        setTodos(newTodos)
+    }
+
+    const toggleCompleted = id => {
+        const todoIndex = todos.findIndex(todo => id === todo.id)
+        const newTodos = [...todos]
+        newTodos[todoIndex] = {
+            ...newTodos[todoIndex],
+            completed: !newTodos[todoIndex].completed
+        }
+        setTodos(newTodos)
+    }
+
     return (
         <div className="App-container">
             <h1 className="App-heading">Todos</h1>
             <div className="App">
                 <TodoInput addTodo={createNewTodo} />
                 {/* we pass our createNewTodo function to the TodosInput component as the addTodo prop */}
-                <TodosList todos={todos} />
+                <TodosList todos={todos} deleteTodo={deleteTodo} toggleCompleted={toggleCompleted} />
                 {/* we pass our todos state to the TodosList component as the todos prop */}
             </div>
         </div>
