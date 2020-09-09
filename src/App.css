@@ -3,5 +3,12 @@
     min-height: 800px;
     background-color: white;
     border-radius: 1rem;
-    margin: 4rem auto;
+    margin: 1rem auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1)
+}
+
+.App-heading {
+    font-size: 5rem;
+    color: hsl(221, 50%, 30%);
+    text-align: center;
 }
