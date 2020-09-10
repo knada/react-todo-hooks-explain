@@ -45,7 +45,7 @@ function App() {
         <div className="App-container">
             <h1 className="App-heading">Todos</h1>
             <div className="App">
-                <VisibilityPanel setVisibilityFilter={setVisibilityFilter} />
+                <VisibilityPanel visibilityFilter={visibilityFilter} setVisibilityFilter={setVisibilityFilter} />
                 <TodoInput addTodo={createNewTodo} />
                 {/* we pass our createNewTodo function to the TodosInput component as the addTodo prop */}
                 <TodosList

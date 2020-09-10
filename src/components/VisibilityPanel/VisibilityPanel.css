@@ -18,6 +18,12 @@
 }
 
 .visibility-tab:hover {
+    background: hsl(220, 50%, 50%);
+    color: hsl(220, 75%, 90%);
+    transition: 0.3s;
+}
+
+.active {
     background: hsl(220, 60%, 40%);
     color: hsl(220, 75%, 90%);
     transition: 0.3s;
