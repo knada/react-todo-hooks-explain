@@ -3,6 +3,7 @@ import TodoItem from '../TodoItem/TodoItem'
 import './TodoList.css'
 
 const TodoList = ({ todos, deleteTodo, toggleCompleted, visibilityFilter }) => {
+    // we filter the todos to show based on the current visibilityFilter
     if (visibilityFilter === 'show_todo') {
         return (
             <ul className="todo-list">
