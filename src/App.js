@@ -12,7 +12,7 @@ function App() {
     // useState is initialized with the inital state and returns a tuple, first item is the state and the second is update function for that state
     // we initialize the state with an array bcos our state will be a *list* of todos
     // We use the "destructuring assignment syntax" get our state and setState variables.
-    const [visibilityFilter, setVisibilityFilter] = useState('show_active')
+    const [visibilityFilter, setVisibilityFilter] = useState('show_todo')
 
     const createNewTodo = text => {
         setTodos(() => {

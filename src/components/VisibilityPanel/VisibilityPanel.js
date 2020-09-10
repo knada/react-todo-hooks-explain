@@ -3,10 +3,16 @@ import './VisibilityPanel.css'
 
 const VisibilityPanel = ({ setVisibilityFilter }) => {
     return (
-        <div className="visivbility-panel">
-            <button onClick={() => setVisibilityFilter('show_active')}>Task to be</button>
-            <button onClick={() => setVisibilityFilter('show_all')}>All tasks</button>
-            <button onClick={() => setVisibilityFilter('show_completed')}>Completed tasks</button>
+        <div className="visibility-panel">
+            <button className="visibility-tab" onClick={() => setVisibilityFilter('show_todo')}>
+                To do
+            </button>
+            <button className="visibility-tab" onClick={() => setVisibilityFilter('show_all')}>
+                All
+            </button>
+            <button className="visibility-tab" onClick={() => setVisibilityFilter('show_done')}>
+                Done
+            </button>
         </div>
     )
 }

@@ -2,9 +2,7 @@ import React from 'react'
 import './TodoItem.css'
 
 const TodoItem = ({ todo, deleteTodo, toggleCompleted }) => {
-    const handleDelete = () => {
-        deleteTodo(todo.id)
-    }
+    const handleDelete = () => deleteTodo(todo.id)
 
     return (
         <li className="todo-item">

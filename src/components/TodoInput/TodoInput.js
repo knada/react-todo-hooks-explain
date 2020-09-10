@@ -11,11 +11,13 @@ const TodoInput = ({ addTodo }) => {
     }
 
     const handleEnter = event => {
-        //When our user presses enter after inputing their todo,
-        //we create add a new todo with the current value and then reset the value.
+        //When our user presses Enter we check to see if the user has made any inputs,
+        //then we add a new todo with the current input value and then reset the input value.
         if (event.key === 'Enter') {
-            addTodo(value)
-            setValue('')
+            if (value !== '') {
+                addTodo(value)
+                setValue('')
+            }
         }
     }
 
