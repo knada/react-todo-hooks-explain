@@ -5,6 +5,13 @@
     box-shadow: 4px 4px 3px 0px hsla(0, 0%, 20%, 0.5);
     border: 1px solid hsla(0, 0%, 20%, 0.5);
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.todo-checkbox {
+    margin: 1rem;
 }
 
 .todo-text {
@@ -12,13 +19,22 @@
 }
 
 .todo-delete-button {
-    display: block;
-    padding: 0.2rem;
+    padding: 0.4rem;
     min-width: 100px;
     border-radius: 0.2rem;
-    background: #f32013;
+    background: hsl(4,90%,60%);
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     color: white;
     border: none;
+    margin-left: auto;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 1px 1px 1px hsla(0, 0%, 20%, 0.5);
+}
+
+.todo-delete-button:hover {
+    background: hsl(4,90%,50%);
+    box-shadow: 2px 2px 4px hsla(0, 0%, 20%, 0.5);
+    transition: 0.5s
 }

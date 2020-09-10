@@ -8,7 +8,12 @@ const TodoItem = ({ todo, deleteTodo, toggleCompleted }) => {
 
     return (
         <li className="todo-item">
-            <input type="checkbox" checked={todo.completed} onChange={() => toggleCompleted(todo.id)} />
+            <input
+                className="todo-checkbox"
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => toggleCompleted(todo.id)}
+            />
             <p className="todo-text">{todo.text}</p>
             <button className="todo-delete-button" onClick={handleDelete}>
                 delete!

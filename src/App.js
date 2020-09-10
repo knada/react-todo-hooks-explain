@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 // Import the various components we need to compose to complete the app.
 import TodoInput from './components/TodoInput/TodoInput'
 import TodosList from './components/TodosList/TodoList'
+import VisibilityPanel from './components/VisibilityPanel/VisibilityPanel'
 // Import css to be used into your app.
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
     // useState is initialized with the inital state and returns a tuple, first item is the state and the second is update function for that state
     // we initialize the state with an array bcos our state will be a *list* of todos
     // We use the "destructuring assignment syntax" get our state and setState variables.
+    const [visibilityFilter, setVisibilityFilter] = useState('show_active')
 
     const createNewTodo = text => {
         setTodos(() => {
@@ -34,12 +36,8 @@ function App() {
     }
 
     const toggleCompleted = id => {
-        const todoIndex = todos.findIndex(todo => id === todo.id)
-        const newTodos = [...todos]
-        newTodos[todoIndex] = {
-            ...newTodos[todoIndex],
-            completed: !newTodos[todoIndex].completed
-        }
+        //the map function returns a new array so we can use to update our state in a functional way.
+        const newTodos = todos.map(todo => (todo.id === id ? { ...todo, completed: !todo.completed } : todo))
         setTodos(newTodos)
     }
 
@@ -47,9 +45,15 @@ function App() {
         <div className="App-container">
             <h1 className="App-heading">Todos</h1>
             <div className="App">
+                <VisibilityPanel setVisibilityFilter={setVisibilityFilter} />
                 <TodoInput addTodo={createNewTodo} />
                 {/* we pass our createNewTodo function to the TodosInput component as the addTodo prop */}
-                <TodosList todos={todos} deleteTodo={deleteTodo} toggleCompleted={toggleCompleted} />
+                <TodosList
+                    todos={todos}
+                    deleteTodo={deleteTodo}
+                    toggleCompleted={toggleCompleted}
+                    visibilityFilter={visibilityFilter}
+                />
                 {/* we pass our todos state to the TodosList component as the todos prop */}
             </div>
         </div>
