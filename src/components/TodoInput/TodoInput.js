@@ -23,7 +23,14 @@ const TodoInput = ({ addTodo }) => {
 
     return (
         <div className="todo-input-container">
-            <input className="todo-input" type="text" onChange={handleChange} onKeyDown={handleEnter} value={value} />
+            <input
+                className="todo-input"
+                type="text"
+                name="todo-input"
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+                value={value}
+            />
         </div>
     )
 }
