@@ -1,4 +1,4 @@
-# Todos App for explaining state and props with hooks and functional components
+<h1 align="center">Todos App for explaining state and props with hooks and functional components</h1>
 
 This project was made entirely for demonstrative and educational purposes, to explain to the basics of react to new users of react,
 as such it is filled with comments showing why decisions were made. 
@@ -29,4 +29,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
